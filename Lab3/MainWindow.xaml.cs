@@ -134,9 +134,19 @@ namespace Lab3
 
             currentGrid.ItemsSource = query.ToList();
         }
+    //Ex7
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var products = from p in db.Products
+                           where p.ProductName.StartsWith("Kick")
+                           select p;
+            foreach (var item in products)
+            {
+                item.unitPrice = 100m;
+            }
 
-
-
-
+            db.SaveChanges();
+            ShowProducts(dgEx6);
+        }
     }
 }

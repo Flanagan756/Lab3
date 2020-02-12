@@ -94,7 +94,7 @@
             </Grid>
         </TabItem>
         <TabItem Name="Ex7" Header="Ex7" Width="50">
-            <Grid>
+            <Grid x:Name="btnqueryEx7">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="31*"/>
                     <ColumnDefinition Width="244*"/>
@@ -104,6 +104,8 @@
                     <RowDefinition Height="10*"/>
                     <RowDefinition Height="90*"/>
                 </Grid.RowDefinitions>
+                <DataGrid Grid.Column="1" HorizontalAlignment="Left" Height="167" Grid.Row="1" VerticalAlignment="Top" Width="492" Grid.ColumnSpan="2"/>
+                <Button Content="Update multiple products" Grid.Column="1" HorizontalAlignment="Left" Margin="0,292,0,0" Grid.Row="1" VerticalAlignment="Top" Width="199" Height="36" Click="Button_Click"/>
 
             </Grid>
         </TabItem>
