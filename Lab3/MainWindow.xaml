@@ -63,5 +63,74 @@
                 <Button x:Name="Query4" Content="OrderInfo" HorizontalAlignment="Left" Height="26" Margin="637,316,0,0" VerticalAlignment="Top" Width="108"  Grid.Column="1" Grid.Row="1" Click="Query4_Click"/>
             </Grid>
         </TabItem>
+        <TabItem Name="Ex5" Header="Ex5" Width="50">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="31*"/>
+                    <ColumnDefinition Width="755*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="90*"/>
+                </Grid.RowDefinitions>
+                <DataGrid x:Name="dgCustomersEx5" Grid.Column="1" HorizontalAlignment="Left" Height="135" Grid.Row="1" VerticalAlignment="Top" Width="538"/>
+                <Button x:Name="btnQueryEx5" Content="Add and show Jungle Juice" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="0,319,0,0" Grid.Row="1" VerticalAlignment="Top" Width="181" Click="BtnQueryEx5_Click"/>
+
+            </Grid>
+        </TabItem>
+        <TabItem Name="Ex6" Header="Ex6" Width="50">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="31*"/>
+                    <ColumnDefinition Width="755*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="90*"/>
+                </Grid.RowDefinitions>
+                <DataGrid x:Name="dgEx6" Grid.Column="1" HorizontalAlignment="Left" Height="297" Margin="0,21,0,0" VerticalAlignment="Top" Width="492" Grid.RowSpan="2"/>
+                <Button x:Name="btnQuery6" Content="Update Product Info" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="0,300,0,0" Grid.Row="1" VerticalAlignment="Top" Width="138" Click="BtnQuery6_Click"/>
+
+            </Grid>
+        </TabItem>
+        <TabItem Name="Ex7" Header="Ex7" Width="50">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="31*"/>
+                    <ColumnDefinition Width="244*"/>
+                    <ColumnDefinition Width="511*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="90*"/>
+                </Grid.RowDefinitions>
+
+            </Grid>
+        </TabItem>
+        <TabItem Name="Ex8" Header="Ex8" Width="50">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="31*"/>
+                    <ColumnDefinition Width="755*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="90*"/>
+                </Grid.RowDefinitions>
+            </Grid>
+        </TabItem>
+        <TabItem Name="Ex9" Header="Ex9" Width="50">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="31*"/>
+                    <ColumnDefinition Width="755*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="90*"/>
+                </Grid.RowDefinitions>
+            </Grid>
+        </TabItem>
+
     </TabControl>
 </Window>

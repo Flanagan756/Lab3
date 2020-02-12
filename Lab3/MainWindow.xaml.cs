@@ -20,7 +20,7 @@ namespace Lab3
     /// </summary>
     public partial class MainWindow : Window
     {
-        NORTHWNDEntities db = new NORTHWNDEntities();
+        NORTHWNDEntities2 db = new NORTHWNDEntities2(); // <<-- North No longer recognised? Issue when I downloaded from github
 
         public MainWindow()
         {
@@ -43,7 +43,7 @@ namespace Lab3
                         select c;
             dgCustomerObjects.ItemsSource = query.ToList();
         }
-
+        //Q3
         private void btnOrderInfo(object sender, RoutedEventArgs e)
         {
             var query = from o in db.Orders
@@ -59,7 +59,7 @@ namespace Lab3
                         };
             dgOrderInfo.ItemsSource = query.ToList().Distinct();
         }
-
+        //Q4 Code to display product information
         private void Query4_Click(object sender, RoutedEventArgs e)
         {
             var query = from p in db.Products
@@ -74,5 +74,69 @@ namespace Lab3
                         };
             dgProductInfo.ItemsSource = query.ToList();
         }
+        //Q5 Code to insert a product
+        private void BtnQueryEx5_Click(object sender, RoutedEventArgs e)
+        {
+            Product p = new Product()
+            {
+                ProductName = "Kickapoo Jungle Joy Juice",
+                UnitPrice = 12.49m,
+                CategoryID = 1
+            };
+
+            db.Products.Add(p);
+            db.SaveChanges();
+
+            ShowProducts(dgCustomersEx5);
+        }
+
+        //Q6 Code to update product information
+
+        private void BtnQuery6_Click(object sender, RoutedEventArgs e)
+        {
+
+            Product p = new Product()
+            {
+                ProductName = "Kickapoo Jungle Joy Juice",
+                UnitPrice = 12.49m,
+                CategoryID = 1
+            };
+
+            db.Products.Add(p);
+            db.SaveChanges();
+
+            ShowProducts(dgCustomersEx5);
+
+            Product p1 = (db.Products
+                .Where(q => q.ProductName.StartsWith("Kick"))
+                .Select(q => q)).First();
+
+           p1.UnitPrice = 100m;
+
+           db.SaveChanges();
+           ShowProducts(dgEx6);
+
+        }
+        //Methods
+        private void ShowProducts(DataGrid currentGrid)
+        {
+
+            var query = from p in db.Products
+                        where p.Category.CategoryName.Equals("Beverages")
+                        orderby p.ProductID descending
+                        select new
+                        {
+                            p.ProductID,
+                            p.ProductName,
+                            p.Category.CategoryName,
+                            p.UnitPrice
+                        };
+
+            currentGrid.ItemsSource = query.ToList();
+        }
+
+
+
+
     }
 }
