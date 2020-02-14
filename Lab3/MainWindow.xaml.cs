@@ -20,7 +20,7 @@ namespace Lab3
     /// </summary>
     public partial class MainWindow : Window
     {
-        NORTHWNDEntities2 db = new NORTHWNDEntities2(); // <<-- North No longer recognised? Issue when I downloaded from github
+        NORTHWNDEntities db = new NORTHWNDEntities (); // <<-- North No longer recognised? Issue when I downloaded from github
 
         public MainWindow()
         {
@@ -142,11 +142,29 @@ namespace Lab3
                            select p;
             foreach (var item in products)
             {
-                item.unitPrice = 100m;
+                item.UnitPrice = 100m;
             }
 
             db.SaveChanges();
-            ShowProducts(dgEx6);
+            ShowProducts(dgEx7);
         }
+        //Ex 8 Code to delete
+        private void btnQueryEx8_Click(object sender, RoutedEventArgs e)
+        {
+            var products = from p in db.Products
+                           where p.ProductName.StartsWith("Kick")
+                           select p;
+
+            db.Products.RemoveRange(products);
+            db.SaveChanges();
+            ShowProducts(dgCustomersEx8);
+        }
+        //Ex 9 using stored procedures
+        private void btnQueryEx9_Click(object sender, RoutedEventArgs e)
+        {
+            var query = db.Customers_By_City("London");
+            dgCustomersEx9.ItemsSource = query.ToList();
+        }
+        
     }
 }

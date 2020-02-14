@@ -104,8 +104,8 @@
                     <RowDefinition Height="10*"/>
                     <RowDefinition Height="90*"/>
                 </Grid.RowDefinitions>
-                <DataGrid Grid.Column="1" HorizontalAlignment="Left" Height="167" Grid.Row="1" VerticalAlignment="Top" Width="492" Grid.ColumnSpan="2"/>
-                <Button Content="Update multiple products" Grid.Column="1" HorizontalAlignment="Left" Margin="0,292,0,0" Grid.Row="1" VerticalAlignment="Top" Width="199" Height="36" Click="Button_Click"/>
+                <DataGrid x:Name="dgEx7" Grid.Column="1" HorizontalAlignment="Left" Height="167" Grid.Row="1" VerticalAlignment="Top" Width="492" Grid.ColumnSpan="2"/>
+                <Button x:Name="btnQueryEx7" Content="Update multiple products" Grid.Column="1" HorizontalAlignment="Left" Margin="0,292,0,0" Grid.Row="1" VerticalAlignment="Top" Width="199" Height="36" Click="Button_Click"/>
 
             </Grid>
         </TabItem>
@@ -113,12 +113,15 @@
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="31*"/>
-                    <ColumnDefinition Width="755*"/>
+                    <ColumnDefinition Width="408*"/>
+                    <ColumnDefinition Width="347*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="10*"/>
                     <RowDefinition Height="90*"/>
                 </Grid.RowDefinitions>
+                <Button x:Name="btnQueryEx8" Content="btnQuery8" Grid.Column="1" HorizontalAlignment="Left" Margin="10,268,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btnQueryEx8_Click"/>
+                <DataGrid x:Name="dgCustomersEx8" Grid.Column="1" HorizontalAlignment="Left" Height="263" Grid.Row="1" VerticalAlignment="Top" Width="568" Grid.ColumnSpan="2"/>
             </Grid>
         </TabItem>
         <TabItem Name="Ex9" Header="Ex9" Width="50">
@@ -131,6 +134,8 @@
                     <RowDefinition Height="10*"/>
                     <RowDefinition Height="90*"/>
                 </Grid.RowDefinitions>
+                <Button x:Name="btnQueryEx9" Content="btnQuery9" Grid.Column="1" HorizontalAlignment="Left" Margin="10,268,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btnQueryEx9_Click"/>
+                <DataGrid x:Name="dgCustomersEx9" Grid.Column="1" HorizontalAlignment="Left" Height="263" Grid.Row="1" VerticalAlignment="Top" Width="568" Grid.ColumnSpan="2"/>
             </Grid>
         </TabItem>
 
